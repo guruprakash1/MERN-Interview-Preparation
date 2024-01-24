@@ -18,3 +18,25 @@ function mul(a){
 console.log(mul(2)(3)(4));
 //Output
 24
+
+Write a program to check the occurance of the array
+
+const arr = [1, 2, 1, 1, 2, 4];
+
+function countOccurrences(arr) {
+  const countMap = {};
+
+  arr.forEach((value) => {
+    countMap[value] = (countMap[value] || 0) + 1;
+  });
+
+  return countMap;
+}
+
+const occurrences = countOccurrences(arr);
+
+console.log("Occurrences:", occurrences);
+
+//Output
+
+Occurrences: { '1': 3, '2': 2, '4': 1 }
