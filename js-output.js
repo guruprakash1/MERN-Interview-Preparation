@@ -181,4 +181,22 @@ Why?
 i- First output: becaue both are number
 ii- Second output: Bercause whenevr we write new keyword it will create object and we have created number object
 They can be same in value but they have different types.
-  
+
+14. What will be output of below question?
+  function fruit(){
+    console.log('hello');
+}
+fruit.name = 'world';
+console.warn(fruit());
+//Output:
+hello
+undefined
+i- First output: Because we are just calling a function
+ii- Seconf output: Because we have not found any value.
+
+15. What will be output of below question? 
+console.log(1 + "2");
+//Output:
+12
+Why?
+Integer with string will be concatenating not doing the summation
