@@ -72,7 +72,10 @@ But in case of let and const we can't access it beofre declaring. Because hoisit
     }, 1)
 }
 
-//Output : 3, 3 , 3 -> 3 times 3
+//Output : 3 times 3
+3
+3 
+3
 // Why?
 // As we declare var and it is global scope and setTimeout is executed in separte thread and it will take some time.
 //As var is global scope so the loop is finished before the settimeOut function
@@ -84,16 +87,98 @@ for (let i = 0; i < 3; i++) {
     }, 1)
 }
 
-//Output : 0, 1 , 2 
+//Output :
+0 
+1 
+2 
 // Why?
 // Because let is function scope
 //As it is block scope so every time out the value will be different.
 
-7. . What will be output of below question?
+7.What will be output of below question?
 console.log(+true);
 console.log(typeof +true);
 
-//Output: 1 and second console number
+//Output: 
+1 
+number
 // Why?
 //Because we added + sign, so it is converting it to number.
 
+8. What will be output of below question?
+console.log(!"anil");
+console.log(!!"anil");
+console.log(typeof("anil"));
+//Output :
+false
+true
+string
+// Why?
+i- First output: Because negeation of string will be false,
+ii- Second output: Double negation will be true
+iii- Third output: Type of string will be string.
+
+9. What will be output of below question?
+
+  let data = "size";
+const bird = {
+    size: "small"
+}
+console.log(bird[data]);
+console.log(bird["size"]);
+console.log(bird.size);
+console.log(bird.data);
+//Output:
+small
+small
+small
+undefined
+// Why?
+i- First output: So whenevre we have object and we pass that key as varibale we can use that bracket
+ii- Second output: Inside the bracket we can use string value
+iii- Third output: We can access the object by . operaotor
+iv-As we are using bird . varibale name so it is not working.
+  
+10. What will be output of below question?
+let c = { name: 'peter' };
+let d;
+d = c;
+c.name = 'alex';
+console.log(d.name);
+//Output:
+alex
+// Why?
+
+Whenever we are using object it is act like reference. So when we change oin varibale c it will chnage automatically in varibale d. 
+  As both have the same memory reference.
+11. What will be output of below question?
+var x;
+var x= 8;
+var x =10;
+console.log(10);
+//Output:
+10
+
+12. What will be output of below question?
+var x;
+var x= 8;
+let x =10;
+console.log(10);
+//Output:
+Uncaught SyntaxError: Identifier 'x' has already been declared
+// Why?
+As let is function scope so we can't declare.
+
+13. What will be output of below question?
+let a = 3;
+let b = new Number(3);
+console.log(a==b);
+console.log(a===b);
+//Output:
+true
+false
+Why?
+i- First output: becaue both are number
+ii- Second output: Bercause whenevr we write new keyword it will create object and we have created number object
+They can be same in value but they have different types.
+  
