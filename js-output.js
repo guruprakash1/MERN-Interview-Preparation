@@ -383,3 +383,13 @@ output:
 [undefined, undefined, undefined]
 Why?
   Because we are just returning, and not returung any value. Empty return will be undefined.
+33. What will be output of below question? 
+  function getInfo(member) {
+    member.name = 'Prakash';
+}
+const person = { name: ' Guru' }
+getInfo(person)
+console.log(person);
+
+output:
+{name: 'Prakash'}
