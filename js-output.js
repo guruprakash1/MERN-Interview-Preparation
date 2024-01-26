@@ -254,6 +254,7 @@ const obj = {1: 'a', 'hello' : 'b', 3 : 'c'};
 console.log(obj.hasOwnProperty(1));
 console.log(obj.hasOwnProperty("1"));
 console.log(obj.hasOwnProperty('hello'));
+
 //Output:
 true
 true
@@ -352,9 +353,33 @@ output:
 
 30. What will be output of below question? 
 console.log([...'Prakash']);
+console.log([...[1, 2, 3]]);
 
 output:
 ['P', 'r', 'a', 'k', 'a', 's', 'h']
+[1, 2, 3]
 
 Why?
   Spread operator spreads the values
+
+31. What will be output of below question? 
+  
+console.log(1 + 2 + '4');
+console.log(1 + 2 + + '4');
+  
+output:
+34
+7
+
+32. What will be output of below question? 
+let data = [1, 2, 3].map((num) => {
+    if (typeof num == 'number') return;
+    return num * 2;
+})
+console.log(data);
+
+output:
+
+[undefined, undefined, undefined]
+Why?
+  Because we are just returning, and not returung any value. Empty return will be undefined.
