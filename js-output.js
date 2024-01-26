@@ -259,4 +259,40 @@ true
 true
 true
 In case of integer we can access by string or int, but in case of string key we can only access by string.
+
+22. What will be output of below question? 
+const obj = {1: 'a', "hello" : 'b', 1 : 'c'};
+console.log(obj);
+//Output:
+{1: 'c', hello: 'b'}
+
+Why?
+In js if we use the same key then it will take the last value but the position will not change.
+23. What will be output of below question? 
+  for (let i = 1; i < 5; i++) {
+    if (i === 3) continue;
+    console.log(i);
+}
+//Output:
+1
+2
+4
+Why?
+As we have written when it is 3 continue, so it is crossing the loop.
+  
+24. What will be output of below question? 
+const foo = () => console.log('First');
+const bar = () => setTimeout(()=>console.log('Second'));
+const baz = () => console.log('Third');
+
+bar();
+foo();
+baz();
+
+//Output:
+First
+Third
+Second
+Why?
+Function declaration is not important, calling function is imporatant. as we are calling bar() first and there setTimeput function preswent so it will take time to execute.
   
