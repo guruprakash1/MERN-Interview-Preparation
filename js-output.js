@@ -333,3 +333,28 @@ console.log(typeof typeof 1);
 
 output:
 string
+
+28. What will be output of below question? 
+
+let arr = [1, 2, 3];
+arr[7] = 6;
+console.log(arr);
+output:
+[1, 2, 3, empty × 4, 6]
+
+29. What will be output of below question? 
+const arr = [1, 2, 3];
+arr[5] = arr;
+console.log(arr);
+
+output:
+[1, 2, 3, empty × 2, Array(6)]
+
+30. What will be output of below question? 
+console.log([...'Prakash']);
+
+output:
+['P', 'r', 'a', 'k', 'a', 's', 'h']
+
+Why?
+  Spread operator spreads the values
