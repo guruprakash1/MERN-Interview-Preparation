@@ -200,3 +200,63 @@ console.log(1 + "2");
 12
 Why?
 Integer with string will be concatenating not doing the summation
+
+16. What will be output of below question? 
+let number = 0;
+console.log(number++);
+console.log(++number);
+console.log(number);
+//Output:
+0
+2
+2
+Why?
+i- First output: number++ will chnage the value post and before that we are doing console.log, so we are getting 0;
+ii- Second output: It's already incremented in line 1 and again it incrementes in line 2.
+iii-Third output: As it is 2 it is giving 2.
+
+17. What will be output of below question? 
+function getAge(...args){
+ console.log(typeof args);
+}
+console.log(getAge(21));
+//Output:
+object
+Why?
+Becuase in JS nothing is array, it is object.
+  
+18. What will be output of below question? 
+function getAge(){
+    "use strict";
+    age = 21;
+    console.log(age);
+}
+getAge();
+//Output:
+Uncaught ReferenceError: age is not defined
+Why?
+As we have added use strict mode we need to declare the varibale first before we use.
+  
+19. What will be output of below question? 
+console.log(eval('10*20+5'));
+//Output:
+205
+Why?
+As we have written eval, it will converting it into integer and giving as integer value
+
+20. How many times the value will store? 
+sessionStorage.setItem('cool_secret', 123);
+//Output:
+It will store the till the browser will close or the tab will close.
+  
+21. What will be output of below question? 
+const obj = {1: 'a', 'hello' : 'b', 3 : 'c'};
+console.log(obj.hasOwnProperty(1));
+console.log(obj.hasOwnProperty("1"));
+console.log(obj.hasOwnProperty('hello'));
+//Output:
+true
+true
+true
+In case of integer we can access by string or int, but in case of string key we can only access by string.
+  
