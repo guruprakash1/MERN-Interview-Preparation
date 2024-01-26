@@ -294,5 +294,42 @@ First
 Third
 Second
 Why?
-Function declaration is not important, calling function is imporatant. as we are calling bar() first and there setTimeput function preswent so it will take time to execute.
-  
+Function declaration is not important, calling function is imporatant. as we are calling bar() first and there setTimeput function present so it will take time to execute.
+
+25. What will be output of below question? 
+    <div onclick="console.log('first')">
+    <div onclick="console.log('Second')">
+      <button onclick="console.log('Third')">Click</button>
+    </div>
+  </div>
+//Output:
+Third
+Second 
+First
+
+Why?
+Event bubble happens from inside to outside.
+
+26. What will be output of below question? 
+
+const person = { name: 'Lylod' };
+
+function sayHi(age) {
+    return `Name is ${this.name} is ${age}`;
+}
+console.log(sayHi.call(person, 21));
+console.log(sayHi.apply(person, 22));
+console.log(sayHi.bind(person, 23));
+
+//Output:
+Name is Lylod is 21
+CreateListFromArrayLike called on non-object
+ƒ sayHi(age) {
+    return `Name is ${this.name} is ${age}`;
+}
+
+27. What will be output of below question? 
+console.log(typeof typeof 1); 
+
+output:
+string
