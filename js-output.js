@@ -393,3 +393,29 @@ console.log(person);
 
 output:
 {name: 'Prakash'}
+
+Why?
+
+  When we are passing object it is passed as reference, so the value will changed.
+  
+34. What will be output of below question? 
+function car(){
+    this.make= 'tata';
+    return {make : 'kia'}
+}
+const mycar = new car();
+console.log(mycar.make);
+output:
+kia
+Why?
+As we are returning the function so we are getting the last retun value
+35. What will be output of below question? 
+(()=> {
+    let x = y = 10;
+})();
+console.log(typeof x);
+console.log(typeof y);
+
+output:
+undefined
+output.js:174 number
