@@ -1,3 +1,6 @@
+//it takes array of promises as input
+//after 3s, the output will come in paralle and it will wait for all of them to finished and it collects the result and give the array of result
+//If there is any failure it will not wait for other promise to be excuted. it will comes out from the promise and throws the error.
 
 const p1 = new Promise((resolve, reject) => {
     setTimeout(() => {

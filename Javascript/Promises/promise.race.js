@@ -1,4 +1,7 @@
-
+//it's like a race. the person who will finish first will be the winner.
+//It will givew the value not array.
+//if the 1st promise is error, it wwill return result of 1st settled error.
+//Whether it is success or error it will give the output.
 const p1 = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve('P1 Success')

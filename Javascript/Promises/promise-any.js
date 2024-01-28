@@ -1,3 +1,5 @@
+//It will wait for any success criteria
+//If there is all errors then it will return arrays of errors.
 
 const p1 = new Promise((resolve, reject) => {
     setTimeout(() => {
