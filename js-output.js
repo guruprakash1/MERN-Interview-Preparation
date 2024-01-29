@@ -419,3 +419,65 @@ console.log(typeof y);
 output:
 undefined
 output.js:174 number
+
+36. Add age in the below code.
+
+const person={
+Name: “john”
+}
+
+Answer:
+
+const updatePerson = {
+...person,
+age: 32
+}
+
+Detailed Explanation: 
+
+In the given code snippet, the use of the spread (...) syntax is to create a shallow copy of the person object and then add a new property age: 32 to the copied object. 
+This is not an example of using the rest parameter.
+
+Here, the spread operator (...) is used for object spreading, not for rest parameters. 
+It is a concise way to copy the properties of one object into another. 
+In this case, it creates a new object updatePerson with the properties of person and adds an additional property age.
+
+37. Assign a and b to the first 2 and the rest to others.
+  const arr1 = [1, 2, 4, 5, 6];
+
+Answer 
+
+const [a, b, ...others] = arr1;
+
+Detailed Explanation:
+
+const [a, b, ...others] = arr1;: This line uses destructuring assignment. a gets the value at index 0 of arr1, b gets the value at index 1, and the ...others syntax is the rest parameter, which collects the remaining elements of the array into a new array named others.
+
+38. Make a combination which can be 10 let a = [1,4, 5, 3, 6, 2] 
+
+Answer:
+function findCombinations(array, targetSum) {
+  const result = [];
+
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === targetSum) {
+        result.push([array[i], array[j]]);
+      }
+    }
+  }
+
+  return result;
+}
+
+const a = [1, 4, 5, 3, 6, 2];
+const targetSum = 10;
+
+const combinations = findCombinations(a, targetSum);
+console.log(combinations);
+
+Detailed explanation:
+
+In this example, the findCombinations function takes an array and a target sum as parameters and returns an array of pairs whose elements add up to the target sum. The provided array is [1, 4, 5, 3, 6, 2], and the target sum is 10. 
+  The function will output the combinations that meet the condition.
+
