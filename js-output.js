@@ -480,4 +480,18 @@ Detailed explanation:
 
 In this example, the findCombinations function takes an array and a target sum as parameters and returns an array of pairs whose elements add up to the target sum. The provided array is [1, 4, 5, 3, 6, 2], and the target sum is 10. 
   The function will output the combinations that meet the condition.
+    
+39. How we can call the below function?
+  
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.talk = function() {
+ console.log(this.name)
+}
+
+//The below way we can find the combination
+var person = new Person("John");
+person.talk(); // Output: John
 
