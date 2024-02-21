@@ -1,4 +1,4 @@
-let name = {
+let name1 = {
     firstanme: 'Prakash',
     lastname: 'Guru'
 }
@@ -8,6 +8,6 @@ function printNames(state, country) {
 }
 
 
-printNames.apply(name, ['Odisha', 'India']);//Here we are passing the values as array of arguments
+printNames.apply(name1, ['Odisha', 'India']);//Here we are passing the values as array of arguments
 
 // Your name is Prakash Guru and state is Odisha and country is India
