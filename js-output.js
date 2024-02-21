@@ -573,3 +573,46 @@ console.log(output);
 
 //Output
 //My Name Is Guru
+40. Find the max combination which having summation will be 0?
+
+function findMaxZeroSumSubarray(arr) {
+  let sum = 0;
+  let startIndex = 0;
+  let endIndex = -1;
+  let sumMap = new Map();
+  let maxLen = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+
+    if (sum === 0) {
+      maxLen = i + 1;
+      endIndex = i;
+    } else {
+      if (sumMap.has(sum)) {
+        if (i - sumMap.get(sum) > maxLen) {
+          maxLen = i - sumMap.get(sum);
+          endIndex = i;
+        }
+      } else {
+        sumMap.set(sum, i);
+      }
+    }
+  }
+
+  startIndex = endIndex - maxLen + 1;
+
+  return arr.slice(startIndex, endIndex + 1);
+}
+
+let arr = [2, -2, 3, -3, 0, 5, 6, -11, 4, 5, 6];
+let maxZeroSumSubarray = findMaxZeroSumSubarray(arr);
+console.log(maxZeroSumSubarray);
+
+//OP:
+[
+  2, -2, 3,  -3,
+  0,  5, 6, -11
+]
+
+
