@@ -495,3 +495,81 @@ Person.prototype.talk = function() {
 var person = new Person("John");
 person.talk(); // Output: John
 
+40.Write a function which will give fizz if the modulous is 3 and buzz if modulus is 5
+// Moduls
+// for(let i = 1; i <20; i++){
+//     if(i%3==0){
+//         console.log('fizz');
+//         console.log(i);
+//     }else if(i%5==0){
+//           console.log('buzz');
+//                   console.log(i);
+//     }
+// }
+
+41.Reverse a word
+
+const str = 'hello world';
+
+let output = '';
+for (let i = str.length - 1; i >= 0; i--) {
+    output = output + str[i];
+}
+
+console.log(output);
+//output
+//dlrow olleh
+
+42. Write a function for fibonaci ServiceWorkerRegistration
+function generateFibonacci(n) {
+  const fibonacciSeries = [0, 1];
+
+  for (let i = 2; i < n; i++) {
+      const nextFibonacci = fibonacciSeries[i - 1] + fibonacciSeries[i - 2];
+      fibonacciSeries.push(nextFibonacci);
+  }
+
+  return fibonacciSeries;
+}
+
+const n = 12; // Change this to the number of Fibonacci numbers you want
+const result = generateFibonacci(n);
+console.log(result);
+
+//Op:
+[
+  0,  1,  1,  2,  3,
+  5,  8, 13, 21, 34,
+ 55, 89
+]
+
+43. What is the oytput of the below question?
+
+console.log(2+"2")//22
+console.log(2 + +"2")//4
+console.log(2-"2");//0
+console.log(6 * "2")//12
+console.log(6/ "4")//1.5
+console.log(6 * "abc")//NaN
+console.log(6 / "abc")//NaN
+
+44. Given the input, i want to the output with space
+
+const input = "MyNameIsGuru";
+let output = input[0]; // Initialize output with the first character
+
+for (let i = 1; i < input.length; i++) {
+    // Check if the current character is an uppercase letter
+    if (input[i] === input[i].toUpperCase()) {
+        // Add a space before the uppercase letter
+        output += ' ' + input[i];
+    } else {
+        // Keep the lowercase letters or other characters as they are
+        output += input[i];
+    }
+}
+
+console.log(output);
+
+//Output
+//My Name Is Guru
